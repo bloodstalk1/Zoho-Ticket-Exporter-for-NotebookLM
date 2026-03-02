@@ -29,11 +29,6 @@ async function runAction(action) {
         return;
     }
 
-    if (!tab.url.includes('zoho') && !tab.url.includes('zohodesk')) {
-        setStatus('❌ Lỗi: Tiện ích này chỉ hoạt động trên trang của Zoho Desk!', 'error');
-        return;
-    }
-
     chrome.scripting.executeScript(
         {
             target: { tabId: tab.id },
