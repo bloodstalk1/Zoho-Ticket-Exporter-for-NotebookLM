@@ -9,8 +9,7 @@
         "downloads"
     ],
     "host_permissions": [
-        "https://*.zoho.com/*",
-        "https://*.zohodesk.com/*"
+        "<all_urls>"
     ],
     "action": {
         "default_popup": "popup.html"
@@ -18,8 +17,7 @@
     "content_scripts": [
         {
             "matches": [
-                "https://*.zoho.com/*",
-                "https://*.zohodesk.com/*"
+                "<all_urls>"
             ],
             "js": [
                 "content.js"
