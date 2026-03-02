@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Zoho Ticket Exporter for NotebookLM",
+    "version": "1.0",
+    "description": "Export Zoho Desk tickets to Markdown for NotebookLM",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "downloads"
+    ],
+    "host_permissions": [
+        "https://*.zoho.com/*",
+        "https://*.zohodesk.com/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.zoho.com/*",
+                "https://*.zohodesk.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
